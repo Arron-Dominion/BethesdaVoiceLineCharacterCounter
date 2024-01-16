@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo("BethesdaVoiceLineCharacterCounter.Test", AllInternalsVisible = true)]
 namespace BethesdaVoiceLineCharacterCounter
 {
     public static class MauiProgram
