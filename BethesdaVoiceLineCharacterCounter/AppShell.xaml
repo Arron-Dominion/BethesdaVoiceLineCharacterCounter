@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BethesdaVoiceLineCharacterCounter.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BethesdaVoiceLineCharacterCounter"
+    xmlns:views="clr-namespace:BethesdaVoiceLineCharacterCounter.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Bethesda Voice Line Character Counter">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Voice Line Calculator">
+            <ShellContent
+                Title="Bethesda Voice Line Calculator"
+                ContentTemplate="{DataTemplate views:VoiceLineCounterPage}"/>
+        </Tab>
+
+        <Tab Title="About">
+            <ShellContent
+                    Title="About"
+                    ContentTemplate="{DataTemplate views:AboutPage}"/>
+        </Tab>
+
+        <Tab Title="Help">
+            <ShellContent
+                Title="Help"
+                ContentTemplate="{DataTemplate views:HelpPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+</Shell>

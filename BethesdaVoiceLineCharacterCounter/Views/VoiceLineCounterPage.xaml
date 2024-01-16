@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:BethesdaVoiceLineCharacterCounter.ViewModels"
+             x:Class="BethesdaVoiceLineCharacterCounter.Views.VoiceLineCounterPage"
+             Title="Bethesda Voice Line Calculator">
+    <ContentPage.BindingContext>
+        <model:VoiceLineCounterViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Label 
+            Text="Game:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="Large"
+            TextDecorations="Underline"/>
+
+        <Picker Title="Please select a game"
+                ItemsSource="{Binding BethesdaGames}"
+                ItemDisplayBinding="{Binding GameName}"
+                SelectedItem="{Binding SelectedBethesdaGame, Mode=TwoWay}"/>
+
+        <Label Text="" />
+        <Label Text="Current Voice Line"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextDecorations="Underline"/>
+
+        <Label Text="" />
+        <Entry Text="{Binding InputText, Mode=TwoWay}"
+               />
+
+        <Label Text="" />
+        <HorizontalStackLayout>
+            <Label Text="Total Characters: "
+                   FontAttributes="Bold"/>
+            <Label Text="{Binding LineStatistics.TotalCharacters, Mode=TwoWay}" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Total Dialogue Sections: "
+                   FontAttributes="Bold"/>
+            <Label Text="{Binding LineStatistics.TotalDialogueSections, Mode=TwoWay}" />
+        </HorizontalStackLayout>
+
+        <Label Text="" />
+        <Button Text="Run"
+                SemanticProperties.Hint="Counts characters and sections for current line"
+                Command="{Binding RunCommand}"
+                HorizontalOptions="CenterAndExpand"/>
+    </VerticalStackLayout>
+</ContentPage>

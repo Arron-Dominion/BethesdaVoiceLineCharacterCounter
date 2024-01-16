@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethesdaVoiceLineCharacterCounter.Views.AboutPage"
+             Title="About">
+    <VerticalStackLayout>
+        <Label 
+            Text="Bethesda Voice Line Counter"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="Header"
+            />
+
+        <Label Text=""/>
+
+        <Label Text="by Arron Dominion"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="Large"/>
+
+        <Label Text="Description:"
+               FontSize="Medium"
+               FontAttributes="Bold"
+               TextDecorations="Underline"/>
+        <Label Text="This program will analyze your voice line. It will return total character count, and how many speech blocks you need. The number of blocks will be based on selected game."
+               LineBreakMode="WordWrap"/>
+    </VerticalStackLayout>
+</ContentPage>

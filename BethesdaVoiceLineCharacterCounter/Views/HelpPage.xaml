@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethesdaVoiceLineCharacterCounter.Views.HelpPage"
+             Title="Help">
+    <VerticalStackLayout>
+        <Label 
+            Text="Bethesda Voice Line Character Counter Help"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="Header" />
+
+        <Label
+            Text="1) Select the game you are currently modding." />
+
+        <Label Text=""/>
+
+        <Label
+            Text="  a) The current options are Fallout 4 | Skyrim | Skyrim Special Edition" />
+
+        <Label Text=""/>
+        
+        <Label
+            Text="2) Type or copy-paste your voice line into the entry box." />
+
+        <Label Text=""/>
+        
+        <Label
+            Text="3) Click or Tap the Run button" />
+
+        <Label Text=""/>
+        
+        <Label
+            Text="4) Review the information provided. Repeat previous steps for additional lines." />
+    </VerticalStackLayout>
+</ContentPage>
