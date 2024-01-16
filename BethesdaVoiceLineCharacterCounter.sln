@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethesdaVoiceLineCharacterCounter", "BethesdaVoiceLineCharacterCounter\BethesdaVoiceLineCharacterCounter.csproj", "{7F6EF796-A39A-43A4-9329-F6BEECB96C28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethesdaVoiceLineCharacterCounter", "BethesdaVoiceLineCharacterCounter\BethesdaVoiceLineCharacterCounter.csproj", "{7F6EF796-A39A-43A4-9329-F6BEECB96C28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethesdaVoiceLineCharacterCounter.Application", "BethesdaVoiceLineCharacterCounter.Application\BethesdaVoiceLineCharacterCounter.Application.csproj", "{92B29A4A-D11A-48B8-868E-C8435C955954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethesdaVoiceLineCharacterCounter.Application", "BethesdaVoiceLineCharacterCounter.Application\BethesdaVoiceLineCharacterCounter.Application.csproj", "{92B29A4A-D11A-48B8-868E-C8435C955954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethesdaVoiceLineCharacterCounter.Domain", "BethesdaVoiceLineCharacterCounter.Domain\BethesdaVoiceLineCharacterCounter.Domain.csproj", "{AC5F4FE3-3601-48E2-A7F1-A59E356615A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethesdaVoiceLineCharacterCounter.Domain", "BethesdaVoiceLineCharacterCounter.Domain\BethesdaVoiceLineCharacterCounter.Domain.csproj", "{AC5F4FE3-3601-48E2-A7F1-A59E356615A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1B3965B2-1525-4AEE-B5AE-008666062380}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2C407DBB-DAF9-45F0-8417-A98F34097326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethesdaVoiceLineCharacterCounter.Application.Tests", "BethesdaVoiceLineCharacterCounter.Application.Tests\BethesdaVoiceLineCharacterCounter.Application.Tests.csproj", "{E2CE2399-169B-4288-841E-B008FFC75A54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BethesdaVoiceLineCharacterCounter.Application.Tests", "BethesdaVoiceLineCharacterCounter.Application.Tests\BethesdaVoiceLineCharacterCounter.Application.Tests.csproj", "{E2CE2399-169B-4288-841E-B008FFC75A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BethesdaVoiceLineCharacterCounter.Test", "BethesdaVoiceLineCharacterCounter.Test\BethesdaVoiceLineCharacterCounter.Test.csproj", "{A83AC586-387A-473C-B180-04EBD34965BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E2CE2399-169B-4288-841E-B008FFC75A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CE2399-169B-4288-841E-B008FFC75A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CE2399-169B-4288-841E-B008FFC75A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83AC586-387A-473C-B180-04EBD34965BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83AC586-387A-473C-B180-04EBD34965BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83AC586-387A-473C-B180-04EBD34965BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83AC586-387A-473C-B180-04EBD34965BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{92B29A4A-D11A-48B8-868E-C8435C955954} = {1B3965B2-1525-4AEE-B5AE-008666062380}
 		{AC5F4FE3-3601-48E2-A7F1-A59E356615A2} = {1B3965B2-1525-4AEE-B5AE-008666062380}
 		{E2CE2399-169B-4288-841E-B008FFC75A54} = {2C407DBB-DAF9-45F0-8417-A98F34097326}
+		{A83AC586-387A-473C-B180-04EBD34965BF} = {2C407DBB-DAF9-45F0-8417-A98F34097326}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {520E20FA-83BA-4BEF-A3CC-7AEB48D2EEDF}

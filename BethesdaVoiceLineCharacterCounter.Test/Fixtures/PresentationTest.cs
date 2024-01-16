@@ -1,9 +1,6 @@
-﻿namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Fixtures
+﻿namespace BethesdaVoiceLineCharacterCounter.Test.Fixtures
 {
-    /// <summary>
-    /// This class will function for 
-    /// </summary>
-    public class ApplicationTest : IDisposable, IAsyncDisposable
+    public class PresentationTest : IDisposable, IAsyncDisposable
     {
         #region [ Variables ]
 
@@ -13,16 +10,16 @@
 
         #region [ Constructors ]
 
-        public ApplicationTest() 
+        public PresentationTest() 
         { 
         
         }
 
         #endregion
 
-        #region [ Destructor ]
+        #region [ Destructors ]
 
-        ~ApplicationTest()
+        ~PresentationTest()
         {
             Dispose(false);
         }

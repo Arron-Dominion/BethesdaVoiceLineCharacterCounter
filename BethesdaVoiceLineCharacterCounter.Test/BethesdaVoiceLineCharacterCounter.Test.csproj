@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
+    <UseMaui>true</UseMaui>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BethesdaVoiceLineCharacterCounter.Application\BethesdaVoiceLineCharacterCounter.Application.csproj" />
     <ProjectReference Include="..\BethesdaVoiceLineCharacterCounter.Domain\BethesdaVoiceLineCharacterCounter.Domain.csproj" />
+    <ProjectReference Include="..\BethesdaVoiceLineCharacterCounter\BethesdaVoiceLineCharacterCounter.csproj" />
   </ItemGroup>
 
 </Project>
