@@ -22,7 +22,7 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Dtos.Input
         /// <summary>
         /// This represents the user entered text.
         /// </summary>
-        public string InputText { get; set; }
+        public string InputText { get; set; } = string.Empty;
 
         #endregion
     }

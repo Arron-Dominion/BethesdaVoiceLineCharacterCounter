@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:models="using:BethesdaVoiceLineCharacterCounter.Domain.Models"
+             xmlns:vm="using:BethesdaVoiceLineCharacterCounter.ViewModels"
+             x:Class="BethesdaVoiceLineCharacterCounter.Views.VoiceLineCounterView"
+             x:DataType="vm:VoiceLineCounterViewModel">
+    <Grid Margin="24"
+          RowDefinitions="Auto,Auto,*,Auto,Auto"
+          RowSpacing="12">
+        <TextBlock Grid.Row="0"
+                   FontSize="26"
+                   FontWeight="SemiBold"
+                   Text="Voice line calculator" />
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto,*" ColumnSpacing="16">
+            <AccessText VerticalAlignment="Center"
+                        Text="_Game" />
+            <ComboBox x:Name="GameSelector"
+                      Grid.Column="1"
+                      MinWidth="280"
+                      HorizontalAlignment="Stretch"
+                      AutomationProperties.Name="Game"
+                      ItemsSource="{Binding BethesdaGames}"
+                      SelectedItem="{Binding SelectedBethesdaGame, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="models:BethesdaGame">
+                        <TextBlock Text="{Binding GameName}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>
+
+        <TextBox x:Name="VoiceLineInput"
+                 Grid.Row="2"
+                 MinHeight="220"
+                 Padding="12"
+                 AcceptsReturn="True"
+                 AutomationProperties.Name="Current voice line"
+                 Text="{Binding InputText, Mode=TwoWay}"
+                 TextWrapping="Wrap"
+                 VerticalContentAlignment="Top"
+                 PlaceholderText="Enter the current voice line" />
+
+        <Grid Grid.Row="3"
+              ColumnDefinitions="*,*"
+              ColumnSpacing="24">
+            <StackPanel>
+                <TextBlock Foreground="{DynamicResource TextControlForegroundSecondary}"
+                           Text="Total characters" />
+                <TextBlock AutomationProperties.Name="Total characters"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Text="{Binding LineStatistics.TotalCharacters}" />
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Foreground="{DynamicResource TextControlForegroundSecondary}"
+                           Text="Dialogue sections" />
+                <TextBlock AutomationProperties.Name="Total dialogue sections"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Text="{Binding LineStatistics.TotalDialogueSections}" />
+            </StackPanel>
+        </Grid>
+
+        <Button Grid.Row="4"
+                MinWidth="140"
+                HorizontalAlignment="Right"
+                AutomationProperties.Name="Count characters and dialogue sections"
+                Command="{Binding RunCommand}"
+                Content="_Run count" />
+    </Grid>
+</UserControl>

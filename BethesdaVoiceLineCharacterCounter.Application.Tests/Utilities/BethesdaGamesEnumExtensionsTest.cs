@@ -23,6 +23,7 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Utilities
         [InlineData(BethesdaGames.Fallout4, "Fallout 4")]
         [InlineData(BethesdaGames.Skyrim, "Skyrim")]
         [InlineData(BethesdaGames.SkyrimSpecialEdition, "Skyrim Special Edition")]
+        [InlineData(BethesdaGames.Starfield, "Starfield")]
         public void GetGameEnumDescription_Success(BethesdaGames game, string expected)
         {
             string result = BethesdaGamesEnumExtensions.GetGameEnumDescription(game);
@@ -34,6 +35,8 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Utilities
         [InlineData("Fallout 4", BethesdaGames.Fallout4)]
         [InlineData("Skyrim", BethesdaGames.Skyrim)]
         [InlineData("Skyrim Special Edition", BethesdaGames.SkyrimSpecialEdition)]
+        [InlineData("Starfield", BethesdaGames.Starfield)]
+        [InlineData("Unknown game", BethesdaGames.Skyrim)]
         public void GetGameEnum_Success(string description, BethesdaGames expected)
         {
             BethesdaGames result = BethesdaGamesEnumExtensions.GetGameEnum(description);

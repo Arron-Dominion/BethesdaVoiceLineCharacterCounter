@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:BethesdaVoiceLineCharacterCounter.ViewModels"
+        xmlns:views="using:BethesdaVoiceLineCharacterCounter.Views"
+        x:Class="BethesdaVoiceLineCharacterCounter.Views.MainWindow"
+        x:DataType="vm:VoiceLineCounterViewModel"
+        Width="900"
+        Height="640"
+        MinWidth="680"
+        MinHeight="520"
+        Title="Bethesda Voice Line Character Counter">
+    <TabControl Margin="24">
+        <TabItem>
+            <TabItem.Header>
+                <AccessText Text="_Calculator" />
+            </TabItem.Header>
+            <views:VoiceLineCounterView />
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <AccessText Text="_About" />
+            </TabItem.Header>
+            <views:AboutView />
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <AccessText Text="_Help" />
+            </TabItem.Header>
+            <views:HelpView />
+        </TabItem>
+    </TabControl>
+</Window>

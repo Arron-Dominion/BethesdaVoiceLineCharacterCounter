@@ -31,6 +31,9 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Utilities
                 case BethesdaGames.Fallout4:
                     limit = 150;
                     break;
+                case BethesdaGames.Starfield:
+                    limit = 350;
+                    break;    
                 default:
                     limit = 149;
                     break;

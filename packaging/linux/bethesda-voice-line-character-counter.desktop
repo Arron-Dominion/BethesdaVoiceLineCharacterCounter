@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Bethesda Voice Line Character Counter
+Comment=Count characters and dialogue sections for Bethesda voice lines
+Exec=bethesda-voice-line-character-counter
+Icon=bethesda-voice-line-character-counter
+Terminal=false
+Categories=Utility;

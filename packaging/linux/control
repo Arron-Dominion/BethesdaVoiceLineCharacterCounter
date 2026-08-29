@@ -1,0 +1,10 @@
+Package: bethesda-voice-line-character-counter
+Version: @VERSION@
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Arron Dominion
+Depends: libx11-6, libice6, libsm6, libfontconfig1
+Description: Character and dialogue-section calculator for Bethesda voice lines
+ Calculates character totals and game-specific dialogue section counts for
+ Fallout 4, Skyrim, Skyrim Special Edition, and Starfield.

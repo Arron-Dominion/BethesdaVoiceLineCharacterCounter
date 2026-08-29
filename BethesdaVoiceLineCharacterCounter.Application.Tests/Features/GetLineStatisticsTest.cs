@@ -30,6 +30,7 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Features
         [InlineData(BethesdaGames.Fallout4)]
         [InlineData(BethesdaGames.Skyrim)]
         [InlineData(BethesdaGames.SkyrimSpecialEdition)]
+        [InlineData(BethesdaGames.Starfield)]
         public void GetLineStatisticsFromInput_OneSectionSuccess(BethesdaGames game)
         {
             LineStatisticsDto expected = new LineStatisticsDto()
@@ -56,6 +57,7 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Features
         [InlineData(BethesdaGames.Fallout4, (long)1)]
         [InlineData(BethesdaGames.Skyrim, (long)2)]
         [InlineData(BethesdaGames.SkyrimSpecialEdition, (long)2)]
+        [InlineData(BethesdaGames.Starfield, (long)1)]
         public void GetLineStatisticsFromInput_DifferentSectionsForGame_Success(BethesdaGames game, long sections)
         {
             LineStatisticsDto expected = new LineStatisticsDto()

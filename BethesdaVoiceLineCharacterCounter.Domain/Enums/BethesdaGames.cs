@@ -13,6 +13,8 @@ namespace BethesdaVoiceLineCharacterCounter.Domain.Enums
         [Description("Skyrim")]
         Skyrim,
         [Description("Skyrim Special Edition")]
-        SkyrimSpecialEdition
+        SkyrimSpecialEdition,
+        [Description("Starfield")]
+        Starfield
     }
 }

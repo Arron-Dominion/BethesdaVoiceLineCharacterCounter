@@ -39,6 +39,11 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Features
                 {
                     GameName = "Skyrim Special Edition",
                     GameType = BethesdaGames.SkyrimSpecialEdition
+                },
+                new BethesdaGame()
+                {
+                    GameName = "Starfield",
+                    GameType = BethesdaGames.Starfield
                 }
             };
 

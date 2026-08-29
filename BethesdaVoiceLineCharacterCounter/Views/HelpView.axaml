@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BethesdaVoiceLineCharacterCounter.Views.HelpView">
+    <ScrollViewer>
+        <StackPanel Margin="24" MaxWidth="680" Spacing="18">
+            <TextBlock FontSize="26"
+                       FontWeight="SemiBold"
+                       Text="Help" />
+            <TextBlock Text="1. Select the game you are currently modding."
+                       TextWrapping="Wrap" />
+            <TextBlock Margin="24,0,0,0"
+                       Text="Available games: Fallout 4, Skyrim, Skyrim Special Edition, and Starfield."
+                       TextWrapping="Wrap" />
+            <TextBlock Text="2. Type or paste your voice line into the text box."
+                       TextWrapping="Wrap" />
+            <TextBlock Text="3. Select Run count."
+                       TextWrapping="Wrap" />
+            <TextBlock Text="4. Review the totals, then repeat for additional lines."
+                       TextWrapping="Wrap" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
