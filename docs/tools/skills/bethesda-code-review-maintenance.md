@@ -185,6 +185,8 @@ The release job does not check out the repository because it only consumes downl
 
 A tag can enter the workflow in two supported ways. Pushing a `v*` tag leaves the workflow responsible for creating the GitHub Release. Publishing a release in the GitHub UI can create both the tag and release before the workflow finishes, so the workflow must upload assets to the existing release instead of trying to create it again. Preserve both branches when changing release automation.
 
+Do not check whether the release exists and then create it as a separate decision. Another actor can create the release between those operations. Attempt creation first; if it fails, confirm the release now exists before uploading assets. If no release exists, preserve the original failure by failing the job rather than treating every creation error as an existing-release race.
+
 ### Avalonia is not WPF
 
 Avalonia's `Label` owns the `Target` property used for access-key focus transfer. `AccessText` does not have that property. The correct project pattern is:
@@ -279,6 +281,8 @@ Use these regression scenarios when changing the corresponding section:
 | Current artifact upload and merged download paths | Do not invent nested package directories. |
 | Release job invokes `gh` without checkout or `GH_REPO` | Report missing GitHub CLI repository context. |
 | GitHub Release already exists for the pushed tag | Use asset upload rather than attempting duplicate release creation. |
+| Release is created concurrently while the job publishes | Failed creation falls back to upload after confirming the release exists. |
+| Release creation fails and no release exists | Fail the job; do not mask the original error with upload fallback. |
 | `AccessText` is given a `Target` property | Reject the invalid Avalonia API; recommend a targeted `Label`. |
 | Unqualified `FluentTheme` with the current package and default namespace | Do not report a namespace error when XAML compilation succeeds. |
 
