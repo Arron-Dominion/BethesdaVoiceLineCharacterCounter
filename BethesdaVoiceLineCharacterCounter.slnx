@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="BethesdaVoiceLineCharacterCounter.Application/BethesdaVoiceLineCharacterCounter.Application.csproj" />
+    <Project Path="BethesdaVoiceLineCharacterCounter.Domain/BethesdaVoiceLineCharacterCounter.Domain.csproj" />
+    <Project Path="BethesdaVoiceLineCharacterCounter/BethesdaVoiceLineCharacterCounter.csproj">
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="BethesdaVoiceLineCharacterCounter.Application.Tests/BethesdaVoiceLineCharacterCounter.Application.Tests.csproj" />
+    <Project Path="BethesdaVoiceLineCharacterCounter.Test/BethesdaVoiceLineCharacterCounter.Test.csproj" />
+  </Folder>
+</Solution>

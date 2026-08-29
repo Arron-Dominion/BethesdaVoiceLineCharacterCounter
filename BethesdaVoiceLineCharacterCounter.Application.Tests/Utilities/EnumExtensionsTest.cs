@@ -23,6 +23,8 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Utilities
         [InlineData(BethesdaGames.Fallout4, "Fallout 4")]
         [InlineData(BethesdaGames.Skyrim, "Skyrim")]
         [InlineData(BethesdaGames.SkyrimSpecialEdition, "Skyrim Special Edition")]
+        [InlineData(BethesdaGames.Starfield, "Starfield")]
+        [InlineData((BethesdaGames)999, "999")]
         public void GetEnumDescription_Success(BethesdaGames game, string expected)
         {
             string result = EnumExtensions.GetEnumDescription(game);

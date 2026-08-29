@@ -17,7 +17,7 @@ namespace BethesdaVoiceLineCharacterCounter.Domain.Models
         /// <summary>
         /// This is the string representation of the game.
         /// </summary>
-        public string GameName { get; set; }
+        public string GameName { get; set; } = string.Empty;
 
         #endregion
     }

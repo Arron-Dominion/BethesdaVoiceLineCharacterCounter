@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="BethesdaVoiceLineCharacterCounter.Views.AboutView">
+    <ScrollViewer>
+        <StackPanel Margin="24" MaxWidth="680" Spacing="18">
+            <TextBlock FontSize="26"
+                       FontWeight="SemiBold"
+                       Text="Bethesda Voice Line Character Counter" />
+            <TextBlock FontSize="16" Text="by Arron Dominion" />
+            <TextBlock FontSize="18"
+                       FontWeight="SemiBold"
+                       Text="About" />
+            <TextBlock Text="This program analyzes a voice line and returns its character count and the number of dialogue sections required for the selected game."
+                       TextWrapping="Wrap" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

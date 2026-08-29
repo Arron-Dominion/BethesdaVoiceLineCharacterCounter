@@ -14,8 +14,13 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Utilities
         /// <returns>A description if present, otherwise the enum itself as a string.</returns>
         public static string GetEnumDescription(Enum value)
         {
-            DescriptionAttribute[] customAttributes = (DescriptionAttribute[])value.GetType().GetField(value.ToString()).GetCustomAttributes(typeof(DescriptionAttribute), false);
-            return customAttributes != null && customAttributes.Length > 0 ? customAttributes[0].Description : value.ToString();
+            DescriptionAttribute? description = value.GetType()
+                .GetField(value.ToString())?
+                .GetCustomAttributes(typeof(DescriptionAttribute), false)
+                .OfType<DescriptionAttribute>()
+                .FirstOrDefault();
+
+            return description?.Description ?? value.ToString();
         }
     }
 }

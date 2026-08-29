@@ -23,6 +23,8 @@ namespace BethesdaVoiceLineCharacterCounter.Application.Tests.Utilities
         [InlineData(BethesdaGames.Fallout4, (long)150)]
         [InlineData(BethesdaGames.Skyrim, (long)149)]
         [InlineData(BethesdaGames.SkyrimSpecialEdition, (long)149)]
+        [InlineData(BethesdaGames.Starfield, (long)350)]
+        [InlineData((BethesdaGames)999, (long)149)]
         public void FetchCharacterLimit_Success(BethesdaGames game, long expected)
         {
             long results = CharacterLimitHandler.FetchCharacterLimit(game);
