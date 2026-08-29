@@ -179,6 +179,12 @@ The current upload paths contain a wildcard after `artifacts/packages/`. `upload
 
 The skill therefore rejects unsupported claims about an automatic `artifacts/artifacts/packages` nesting. Re-check the official documentation for the exact action major version whenever action versions, wildcard positions, `path`, or `merge-multiple` change.
 
+### Release jobs need repository context and must handle existing releases
+
+The release job does not check out the repository because it only consumes downloaded package artifacts. GitHub CLI cannot infer a repository from that workspace, so the workflow supplies `GH_REPO` explicitly. Removing both checkout and explicit repository context causes commands such as `gh release create --verify-tag` to fail with `fatal: not a git repository`.
+
+A tag can enter the workflow in two supported ways. Pushing a `v*` tag leaves the workflow responsible for creating the GitHub Release. Publishing a release in the GitHub UI can create both the tag and release before the workflow finishes, so the workflow must upload assets to the existing release instead of trying to create it again. Preserve both branches when changing release automation.
+
 ### Avalonia is not WPF
 
 Avalonia's `Label` owns the `Target` property used for access-key focus transfer. `AccessText` does not have that property. The correct project pattern is:
@@ -271,6 +277,8 @@ Use these regression scenarios when changing the corresponding section:
 | Debian control template lacks a final LF | Report the package parsing risk. |
 | Explicit assembly versions block `-p:Version` | Report inconsistent shipped version metadata. |
 | Current artifact upload and merged download paths | Do not invent nested package directories. |
+| Release job invokes `gh` without checkout or `GH_REPO` | Report missing GitHub CLI repository context. |
+| GitHub Release already exists for the pushed tag | Use asset upload rather than attempting duplicate release creation. |
 | `AccessText` is given a `Target` property | Reject the invalid Avalonia API; recommend a targeted `Label`. |
 | Unqualified `FluentTheme` with the current package and default namespace | Do not report a namespace error when XAML compilation succeeds. |
 

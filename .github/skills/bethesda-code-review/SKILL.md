@@ -127,6 +127,8 @@ Read `docs/tools/package/linux-packaging-maintenance.md` when reviewing `scripts
 - With `download-artifact` and `merge-multiple: true`, matched artifacts are extracted into the same configured destination rather than separate artifact-name directories.
 - Therefore, do not report nested `artifacts/artifacts/packages` paths or claim `artifacts/*` misses release files unless the workflow patterns or action behavior have changed and evidence supports it.
 - Check tag normalization, prerelease-compatible version syntax, job dependencies, permissions, artifact-name uniqueness, checksum inclusion, and shell-specific quoting.
+- A job that invokes `gh` without checking out the repository must provide repository context through `GH_REPO` or `--repo`; otherwise GitHub CLI may fail while trying to discover a Git repository.
+- Account for both supported tag paths: a pushed tag may need `gh release create`, while publishing a release in the GitHub UI creates the release before packaging finishes and requires `gh release upload`.
 - Confirm release globs select only intended package files and that a missing required artifact fails visibly rather than silently producing an incomplete release.
 
 ## Documentation Checks
