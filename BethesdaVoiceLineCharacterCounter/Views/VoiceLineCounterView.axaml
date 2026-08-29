@@ -13,8 +13,9 @@
                    Text="Voice line calculator" />
 
         <Grid Grid.Row="1" ColumnDefinitions="Auto,*" ColumnSpacing="16">
-            <AccessText VerticalAlignment="Center"
-                        Text="_Game" />
+            <Label VerticalAlignment="Center"
+                   Target="GameSelector"
+                   Content="_Game" />
             <ComboBox x:Name="GameSelector"
                       Grid.Column="1"
                       MinWidth="280"
