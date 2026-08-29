@@ -74,4 +74,4 @@ bash ./scripts/package-linux.sh 1.0.0
 
 See the [Linux packaging maintenance guide](docs/tools/package/linux-packaging-maintenance.md) before changing package identity, install paths, dependencies, desktop integration, architecture, or artifact names.
 
-Both scripts write SHA-256 checksum files beside the release artifacts. Version tags matching `v*` run the GitHub Actions release workflow and publish all generated packages.
+Both scripts write SHA-256 checksum files beside the release artifacts. Push a version tag matching `v*`, such as `v2.0.0`, to run the GitHub Actions release workflow and publish all generated packages. The workflow creates the GitHub Release when it does not exist; if the tag was created by publishing a release in the GitHub UI, the workflow uploads the generated packages to that existing release.
